@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Available Scripts
+Este proyecto es una aplicación React para gestionar reservas en un sistema. Permite visualizar, añadir, actualizar y eliminar reservas. También incluye funcionalidades para filtrar las reservas por nombre de persona, rango de fechas y servicio.
 
-In the project directory, you can run:
+## Tecnologías Utilizadas
 
-### `npm start`
+- **React**: Librería para construir interfaces de usuario.
+- **Axios**: Biblioteca para realizar solicitudes HTTP.
+- **React-Bootstrap**: Biblioteca de componentes Bootstrap para React.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Requisitos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Antes de ejecutar el proyecto, asegúrate de tener instalados los siguientes elementos:
 
-### `npm test`
+- [Node.js](https://nodejs.org/) (que incluye npm)
+- [React](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instalación
 
-### `npm run build`
+1. **Clona el repositorio** o descarga el código fuente del proyecto.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Navega a la carpeta del proyecto usando cmd**.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Instala las dependencias del proyecto**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+## Librerías Necesarias
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Asegúrate de que las siguientes librerías estén en el archivo `package.json` de tu proyecto. Si no están, puedes instalarlas con npm:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `axios`: Para realizar solicitudes HTTP.
+- `react-bootstrap`: Para utilizar los componentes de Bootstrap en React.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Instala estas librerías usando los siguientes comandos:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install axios react-bootstrap bootstrap
+```
 
-## Learn More
+## Configuración
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Asegúrate de que el backend está ejecutándose en `http://localhost:8080` y que proporciona los endpoints necesarios para las reservas, servicios y personas.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Ejecución del Proyecto
 
-### Code Splitting
+Para iniciar la aplicación en modo desarrollo, utiliza el siguiente comando:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
+## Estructura del Código
 
-### Analyzing the Bundle Size
+- **`App.js`**: Componente principal que maneja la visualización y gestión de reservas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - **`useState`**: Maneja el estado para reservas, servicios, personas, modales, mensajes de error y éxito, y filtros.
+  - **`useEffect`**: Realiza las solicitudes iniciales para obtener datos de reservas, servicios y personas.
+  - **`handleShowUpdateModal`**: Muestra el modal para actualizar una reserva.
+  - **`handleCloseModal`**: Cierra los modales y limpia los estados relacionados.
+  - **`handleInputChange`**: Maneja los cambios en los campos de entrada.
+  - **`handleUpdateReserva`**: Actualiza una reserva existente.
+  - **`handleDeleteReserva`**: Elimina una reserva.
+  - **`handleAddReserva`**: Añade una nueva reserva.
+  - **`handleFilterChange`**: Maneja los cambios en los filtros para las reservas.
+  - **`filteredReservas`**: Filtra las reservas según los criterios seleccionados.
